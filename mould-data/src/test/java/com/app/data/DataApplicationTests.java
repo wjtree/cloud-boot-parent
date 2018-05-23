@@ -1,4 +1,4 @@
-package com.app.web;
+package com.app.data;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class MouldWebApplicationTests {
+public class DataApplicationTests {
 
     @Test
     public void contextLoads() {
