@@ -29,6 +29,9 @@
         <connection>scm:git@github.com:wjtree/cloud-boot-parent.git</connection>
     </scm>
     <modules>
+        <module>mould-data</module>
+        <module>mould-server</module>
+        <module>mould-web</module>
     </modules>
     <properties>
         <!-- Custom properties -->
@@ -58,6 +61,7 @@
         <spring-cloud-vault.version>2.0.0.RC1</spring-cloud-vault.version>
         <spring-cloud-zookeeper.version>2.0.0.RC1</spring-cloud-zookeeper.version>
 
+        <spring-boot-admin.version>2.0.0</spring-boot-admin.version>
         <mybatis-spring-boot.version>1.3.2</mybatis-spring-boot.version>
         <dubbo-spring-boot.version>0.1.0</dubbo-spring-boot.version>
         <druid-spring-boot.version>1.1.9</druid-spring-boot.version>
@@ -217,6 +221,13 @@
             </dependency>
 
             <!-- Spring Boot -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-dependencies</artifactId>
+                <version>${spring-boot-admin.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
@@ -681,9 +692,17 @@
     <!-- Maven 仓库 -->
     <repositories>
         <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
-            <url>https://repo.spring.io/libs-milestone</url>
+            <url>https://repo.spring.io/milestone</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
