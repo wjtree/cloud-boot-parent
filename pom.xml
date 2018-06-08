@@ -82,6 +82,7 @@
         <turbine-core.version>2.0.0-DP.2</turbine-core.version>
         <jackson-asl.version>1.9.13</jackson-asl.version>
         <HdrHistogram.version>2.1.10</HdrHistogram.version>
+        <feign.version>3.3.0</feign.version>
         <!-- Plugin versions -->
         <maven-scm-plugin.version>1.9.5</maven-scm-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
@@ -374,6 +375,16 @@
                 <groupId>org.hdrhistogram</groupId>
                 <artifactId>HdrHistogram</artifactId>
                 <version>${HdrHistogram.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign.form</groupId>
+                <artifactId>feign-form</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign.form</groupId>
+                <artifactId>feign-form-spring</artifactId>
+                <version>${feign.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
